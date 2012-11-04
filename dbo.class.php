@@ -71,13 +71,7 @@ class DBO extends Object {
     
     public function species_names_by_page($name = "",$pageNumber = 0,$pageSize = 100) 
     {
-        
-        ErrorMessage::Marker(__METHOD__." $name $pageNumber $pageSize");
-
         $url = "http://biocache.ala.org.au/ws/webportal/species?q={$name}&pageSize={$pageSize}&start={$pageNumber}";
-        
-        ErrorMessage::Marker(__METHOD__." {$url}"); 
-        
         
         $f = file_get_contents($url);
         
@@ -92,14 +86,11 @@ class DBO extends Object {
         
         $pageNumber = 0;
         
-        ErrorMessage::Marker("Get First page");
-        
         $chunk = self::species_names_by_page($name,$pageNumber,$pageSize);
         
         $result = array();
         while (count($chunk) == $pageSize) // lop while the size of the hunk is as big as the page
         {            
-            ErrorMessage::Marker("Get page {$pageNumber}");
             
             $result = array_merge($result,$chunk);
             $chunk = self::species_names_by_page($name,$pageNumber,$pageSize);
