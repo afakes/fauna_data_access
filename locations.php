@@ -17,14 +17,17 @@ $DB = new DBO();
 // print_r($DB->distributions());
 // print_r($DB->occurrences());
 
-// print_r($DB->species_names());
+ $all = $DB->species_names_all("",100);
 
- print_r($DB->occurences_for_lsid(
-             $lsid = "urn:lsid:biodiversity.org.au:afd.taxon:2ee18b7b-bae4-492f-9466-44d7f7a82790"
-            ,$pageNumber = 0
-            ,$pageSize   = 10
-            )
-         );
+ 
+ //print_r($all);
+ 
+// print_r($DB->occurences_for_lsid(
+//             $lsid = "urn:lsid:biodiversity.org.au:afd.taxon:2ee18b7b-bae4-492f-9466-44d7f7a82790"
+//            ,$pageNumber = 0
+//            ,$pageSize   = 10
+//            )
+//         );
 
 // urn:lsid:biodiversity.org.au:afd.name:242202
 

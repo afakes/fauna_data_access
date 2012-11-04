@@ -69,19 +69,60 @@ class DBO extends Object {
     }
 
     
-    public function species_names($name = "",$pageNumber = 0,$pageSize = 100) 
+    public function species_names_by_page($name = "",$pageNumber = 0,$pageSize = 100) 
     {
         
-        $f = file_get_contents("http://biocache.ala.org.au/ws/webportal/species?q={$name}&pageSize={$pageSize}&start={$pageNumber}");
+        ErrorMessage::Marker(__METHOD__." $name $pageNumber $pageSize");
 
-        $j = json_decode($f);
+        $url = "http://biocache.ala.org.au/ws/webportal/species?q={$name}&pageSize={$pageSize}&start={$pageNumber}";
+        
+        ErrorMessage::Marker(__METHOD__." {$url}"); 
+        
+        
+        $f = file_get_contents($url);
+        
+        $j = json_decode($f,true);
         
         return  $j;
         
     }
 
+    public function species_names_all($name = "",$pageSize = 100) 
+    {
+        
+        $pageNumber = 0;
+        
+        ErrorMessage::Marker("Get First page");
+        
+        $chunk = self::species_names_by_page($name,$pageNumber,$pageSize);
+        
+        $result = array();
+        while (count($chunk) == $pageSize) // lop while the size of the hunk is as big as the page
+        {            
+            ErrorMessage::Marker("Get page {$pageNumber}");
+            
+            $result = array_merge($result,$chunk);
+            $chunk = self::species_names_by_page($name,$pageNumber,$pageSize);
+            $pageNumber++;
+        }
+        
+        $result = array_merge($result,$chunk);
+        
+        return  $result;
+        
+    }
     
-    public function occurences_for_lsid($lsid = "",$pageNumber = 0,$pageSize = 100) 
+    
+    
+    public function occurences_for_lsid_all_page($lsid = "") 
+    {
+        
+        
+        
+    }
+    
+    
+    public function occurences_for_lsid_by_page($lsid = "",$pageNumber = 0,$pageSize = 100) 
     {
         
         $f = file_get_contents("http://biocache.ala.org.au/ws/webportal/occurrences?q=lsid:{$lsid}&pageSize={$pageSize}&start={$pageNumber}");
