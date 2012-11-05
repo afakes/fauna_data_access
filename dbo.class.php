@@ -58,11 +58,11 @@ class DBO extends Object {
     }
     
 
-    public function occurrences($name = "macropus") 
+    public function occurrences_by_page($name = "",$pageNumber = 0,$pageSize = 100) 
     {
-        $f = file_get_contents("http://biocache.ala.org.au/ws/webportal/occurrences?q={$name}");
+        $f = file_get_contents("http://biocache.ala.org.au/ws/webportal/occurrences?q={$name}&pageSize={$pageSize}&start={$pageNumber}");
 
-        $j = json_decode($f);
+        $j = json_decode($f,true);
         
         return  $j;
         

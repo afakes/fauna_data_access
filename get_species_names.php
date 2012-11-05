@@ -1,14 +1,15 @@
 <?php
 include_once 'includes.php';
 
-if ($argv[1] == "--help" || $argv[1] == "-h")
+if (!isset($argv[1]) ||  $argv[1] == "--help" || $argv[1] == "-h")
 {
     echo " {$argv[0]} [--delim=|] [--rank=TaxanomicRank] name=SpeciesName    ... list of species like \n";
     echo " {$argv[0]} [--delim=|] [--rank=TaxanomicRank] name=*              ... list of all species \n";
 
     echo " default delimiter '|' \n";
     echo " \n";
-    echo " page_count=n  .... stop after this number of pages (useful for testing)\n";
+    echo " --page_count=n  .... stop after this number of pages (useful for testing)\n";
+    echo " --page_size=100 .... each page of data is this many rows\n";
     echo " \n";
     echo " --rank=
  value list
@@ -54,7 +55,8 @@ $page_count = util::CommandLineOptionValue($argv, 'page_count',-1);
 
 $DB = new DBO();
 
-$pageSize = 100;
+$pageSize  = util::CommandLineOptionValue($argv, 'page_size',100);
+
 
 $pageNumber = 0;
 
@@ -84,7 +86,7 @@ while (count($chunk) == $pageSize) // lop while the size of the hunk is as big a
     
     if ($page_count >= 0)
     {
-        if ($page_count * $pageSize == $pageNumber) exit();
+        if (($page_count -1 ) * $pageSize == $pageNumber) exit();
     }
     
     $pageNumber += $pageSize;

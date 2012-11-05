@@ -15,9 +15,9 @@ $DB = new DBO();
 //print_r($DB->VERTEBRATA());
 
 // print_r($DB->distributions());
-// print_r($DB->occurrences());
+ print_r($DB->occurrences());
 
- $all = $DB->species_names_all("",100);
+ //$all = $DB->species_names_all("",100);
 
  
  //print_r($all);
