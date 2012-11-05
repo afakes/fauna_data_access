@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia atrox|-29.79|150.72|2000-07-01
+Acacia atrox|-29.79|150.72|2000-05-01

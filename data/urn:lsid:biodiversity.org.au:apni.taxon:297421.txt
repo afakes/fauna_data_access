@@ -1,0 +1,17 @@
+scientific_name|lat|lng|occurrence_date
+Acacia gracilifolia|-33.03916|138.12654|1985-10-01
+Acacia gracilifolia|-33.03916|138.12654|1988-08-01
+Acacia gracilifolia|-33.03916|138.12654|1988-08-01
+Acacia gracilifolia|-32.92989|138.09612|1996--01
+Acacia gracilifolia|-32.70449|138.07486|1992-10-01
+Acacia gracilifolia|-32.72008|138.07867|1992-10-01
+Acacia gracilifolia|-32.72841|138.0531|1983-01-01
+Acacia gracilifolia|-32.75595|138.07407|1999-11-01
+Acacia gracilifolia|-32.81362|138.06278|1999-11-01
+Acacia gracilifolia|-33.04059|138.12506|1999-11-01
+Acacia gracilifolia|-32.78668|138.06606|1992-10-01
+Acacia gracilifolia|-32.77155|138.07217|1992-10-01
+Acacia gracilifolia|-32.75331|138.07682|1986-07-01
+Acacia gracilifolia|-33.04281|138.11974|1986-08-01
+Acacia gracilifolia|-32.74065|138.0751|1986-07-01
+Acacia gracilifolia|-32.92989|138.09612|1982--01

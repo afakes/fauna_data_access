@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia blakelyi|-29.19305556|115.43666667|--01

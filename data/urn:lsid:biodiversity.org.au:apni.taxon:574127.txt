@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia atopa|-25.1|115|1969-05-01

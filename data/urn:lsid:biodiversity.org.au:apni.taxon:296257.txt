@@ -1,0 +1,5 @@
+scientific_name|lat|lng|occurrence_date
+Acacia beadleana|-29.54603873571|152.30020289383|1960-11-01
+Acacia beadleana|-29.543252944946|152.26695251465|2005-07-01
+Acacia beadleana|-30.75|152.9|1988-09-01
+Acacia beadleana|-29.58333333|152.36666667|1960-11-01

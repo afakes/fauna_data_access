@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia chamaeleon|-33.68972222|117.55138889|--01

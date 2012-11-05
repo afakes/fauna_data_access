@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia anomala|-31.6|116|--01

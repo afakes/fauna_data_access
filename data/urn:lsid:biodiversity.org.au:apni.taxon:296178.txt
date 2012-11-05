@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia auronitens|-31.87139|116.04472|1993-01-01

@@ -1,0 +1,8 @@
+scientific_name|lat|lng|occurrence_date
+Acacia alcockii|-34.81851|135.84865|2009-01-01
+Acacia alcockii|-34.83826|135.89824|1995-10-01
+Acacia alcockii|-34.91393|135.65503|1985--01
+Acacia alcockii|-34.91393|135.65503|1986-05-01
+Acacia alcockii|-34.90352|135.91921|1995-10-01
+Acacia alcockii|-34.52576|135.15796|1995-10-01
+Acacia alcockii|-34.78333333|135.93333333|--01

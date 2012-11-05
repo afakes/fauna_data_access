@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia clelandii|-29.84577|134.21612|2006-11-01
+Acacia clelandii|-29.57219|134.01455|2006-11-01

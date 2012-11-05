@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia crassicarpa|-15.2547222227|144.997777778|2007-05-01
+Acacia crassicarpa|-11.6453|130.702|2002-05-01
+Acacia crassicarpa|-14.67311|145.459156|2009-10-01

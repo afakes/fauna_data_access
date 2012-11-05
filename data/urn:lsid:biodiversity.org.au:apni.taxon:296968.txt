@@ -1,0 +1,22 @@
+scientific_name|lat|lng|occurrence_date
+Acacia dolichophylla|-23.63105|132.98494|--01
+Acacia dolichophylla|-23.63551|132.98071|--01
+Acacia dolichophylla|-23.63551|132.98076|--01
+Acacia dolichophylla|-23.63884|132.98593|--01
+Acacia dolichophylla|-23.6425|132.8964|1998-03-01
+Acacia dolichophylla|-23.64328|132.9009|--01
+Acacia dolichophylla|-23.64411|132.95849|--01
+Acacia dolichophylla|-23.64485|132.89687|--01
+Acacia dolichophylla|-23.6452|132.8967|1999-09-01
+Acacia dolichophylla|-23.64748|132.89687|2002-05-01
+Acacia dolichophylla|-23.64857|132.91794|1976-09-01
+Acacia dolichophylla|-23.64858|132.96794|1976-09-01
+Acacia dolichophylla|-23.64858|132.96794|1991-06-01
+Acacia dolichophylla|-23.65216|133.00366|2006-05-01
+Acacia dolichophylla|-23.66437|133.01753|--01
+Acacia dolichophylla|-23.66525|133.0346|1989-04-01
+Acacia dolichophylla|-23.66551|133.01793|--01
+Acacia dolichophylla|-23.69674|133.25303|--01
+Acacia dolichophylla|-23.69704|133.25529|--01
+Acacia dolichophylla|-23.69857|132.90128|1975-07-01
+Acacia dolichophylla|-23.74858|132.96794|1975-01-01

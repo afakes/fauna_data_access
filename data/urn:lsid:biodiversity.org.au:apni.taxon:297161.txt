@@ -1,0 +1,6 @@
+scientific_name|lat|lng|occurrence_date
+Acacia eriopoda|-19.08333333|121.68333333|--01
+Acacia eriopoda|-17.36666667|123.995|--01
+Acacia eriopoda|-17.96666667|122.23333333|--01
+Acacia eriopoda|-17.96666667|122.23333333|--01
+Acacia eriopoda|-20.39111111|120.02416667|1987-07-01

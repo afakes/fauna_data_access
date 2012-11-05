@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia amblyophylla|-25.91666667|113.53333333|--01

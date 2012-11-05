@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia evenulosa|-32.67674319|119.78407477|1996-09-01

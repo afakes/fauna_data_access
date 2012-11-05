@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Ablennes hians|-12.75|141.75|1986-10-01

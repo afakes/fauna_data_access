@@ -1,0 +1,7 @@
+scientific_name|lat|lng|occurrence_date
+Acacia durabilis|-33.5|120.1|2009-01-01
+Acacia durabilis|-33.5|120.1|2008-12-01
+Acacia durabilis|-33.6|120.1|2007-04-01
+Acacia durabilis|-33.5|120|2007-03-01
+Acacia durabilis|-33.6|120.2|2007-09-01
+Acacia durabilis|-33.5|120.1|2008-12-01

@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia daphnifolia|-30.995|115.67638889|--01

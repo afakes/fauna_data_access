@@ -1,0 +1,10 @@
+name|commonName|guid|kingdom|family|count|rank
+Aaaba fossicollis||urn:lsid:biodiversity.org.au:afd.taxon:d9da540e-1a00-4d9b-8bf1-df7f746291e1|ANIMALIA|BUPRESTIDAE|22|species
+Aaaba nodosus||urn:lsid:biodiversity.org.au:afd.taxon:3b36f3a9-d306-43d7-a2b7-fed29cdafab3|ANIMALIA|BUPRESTIDAE|38|species
+Aacanthocnema casuarinae||urn:lsid:biodiversity.org.au:afd.taxon:876a0626-fc32-4d07-8ec1-38b3f388be5e|ANIMALIA|TRIOZIDAE|7|species
+Aacanthocnema dobsoni||urn:lsid:biodiversity.org.au:afd.taxon:0e98be32-430e-4aff-99a4-b319797f6c05|ANIMALIA|TRIOZIDAE|1|species
+Aaptos aaptos||urn:lsid:biodiversity.org.au:afd.taxon:0e5c61e6-f999-45f1-b9fd-f2ec9f10086d|ANIMALIA|SUBERITIDAE|41|species
+Aaptos ciliata||urn:lsid:catalogueoflife.org:taxon:df37f942-29c1-102b-9a4a-00304854f820:col20110201|ANIMALIA|SUBERITIDAE|1|species
+Aaptos suberitoides||urn:lsid:catalogueoflife.org:taxon:df383af6-29c1-102b-9a4a-00304854f820:col20110201|ANIMALIA|SUBERITIDAE|9|species
+Aaroniella rawlingsi||urn:lsid:biodiversity.org.au:afd.taxon:fce2e726-db0a-4b23-8a96-04409175e810|ANIMALIA|PHILOTARSIDAE|51|species
+Aatolana rapax||urn:lsid:biodiversity.org.au:afd.taxon:75eef353-bbca-4412-91fa-084b783dae53|ANIMALIA|CIROLANIDAE|3|species

@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia aphanoclada|-21.9|120.1|1982-05-01

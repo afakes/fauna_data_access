@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia aphylla|-32|116.2|--01

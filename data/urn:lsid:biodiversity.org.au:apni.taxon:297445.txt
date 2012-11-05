@@ -1,0 +1,5 @@
+scientific_name|lat|lng|occurrence_date
+Acacia hastulata|-34.92833333|117.91138889|1984-09-01
+Acacia hastulata|-34.30138889|115.59861111|1987-06-01
+Acacia hastulata|-34.66805556|116.11944444|1988-11-01
+Acacia hastulata|-34.19444444|115.26805556|1992-04-01

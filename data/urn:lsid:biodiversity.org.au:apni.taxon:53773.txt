@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Abutilon tubulosum|-31.8901821609|150.98576330765|1997-11-01
+Abutilon tubulosum|-30.549564326926|150.94104055932|1989-11-01

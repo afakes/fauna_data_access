@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia deltoidea subsp. deltoidea|-14.47|125.31805556|--01
+Acacia deltoidea subsp. deltoidea|-14.47|125.31805556|--01

@@ -1,0 +1,13 @@
+scientific_name|lat|lng|occurrence_date
+Acacia enterocarpa|-36.39295|140.41235|2007-05-01
+Acacia enterocarpa|-34.13474|135.63639|2000-04-01
+Acacia enterocarpa|-34.37849|135.71157|1983-10-01
+Acacia enterocarpa|-34.37214|135.71179|2000-10-01
+Acacia enterocarpa|-34.37183|135.7118|2000-10-01
+Acacia enterocarpa|-34.19214|136.04477|2000-07-01
+Acacia enterocarpa|-34.17464|136.0577|2000-04-01
+Acacia enterocarpa|-34.17553|136.12214|2000-04-01
+Acacia enterocarpa|-34.06|136.14|2000-01-01
+Acacia enterocarpa|-34.11523|136.31369|2000--01
+Acacia enterocarpa|-33.64411|136.76456|1985-01-01
+Acacia enterocarpa|-36.32499|140.42746|1994--01

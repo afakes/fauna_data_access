@@ -1,85 +1,136 @@
 <?php
 include_once 'includes.php';
 
-if (!isset($argv[1]) ||  $argv[1] == "--help" || $argv[1] == "-h")
-{
-    echo " {$argv[0]} [--delim=|] name=SpeciesName       .... occurence points for this species \n";
-    echo " {$argv[0]} [--delim=|] name=lsid:(ALA LSID)   .... use the accurate LSID from the species list\n";
+usage($argv);   // check to see if they have passed args and show usage if not
 
-    echo " --delim='|'    ... column delimiter \n";
-    echo " default delimiter '|' \n";
-    echo " \n";
-    echo " --page_count=n  .... stop after this number of pages (useful for testing)\n";
-    echo " --page_size=100 .... each page of data is this many rows (tested to work up to 500 rows - becomes less responsive over this)\n";
-    echo " \n";
-    echo " \n";
-    
+
+$name = util::CommandLineOptionValue($argv, 'name','');
+if ($name == '*') $name = '';
+
+$lsid = util::CommandLineOptionValue($argv, 'lsid','');
+if ($lsid != '') $name = "lsid:$lsid"; 
+
+if ($name == '') 
+{
+    echo "ERROR: name or lsid not specified \n";
+    usage($argv);
+}
+
+
+
+$delim      = util::CommandLineOptionValue($argv, 'delim','|');         // default to | pipe as delimiter as comma is used a lot in tgext
+$page_count = util::CommandLineOptionValue($argv, 'page_count',-1);     // default is  -1  download all pages
+$pageSize   = util::CommandLineOptionValue($argv, 'page_size',500);     // default is 100 rows per page
+
+$info_only   = util::CommandLineOptionValue($argv, 'info_only',false);  // return info about the search BUT nosearch results
+
+
+$chunk = occurrences_by_page($name,0,1); // make one read to get number of records
+$totalRecords = $chunk['totalRecords'];
+
+
+if ($info_only)
+{
+    print_r($chunk);  // just display information and quit
     exit();
 }
 
-$name = util::CommandLineOptionValue($argv, 'name','');
-if ($name == '') exit();
-if ($name == '*') $name = '';
-
-$delim = util::CommandLineOptionValue($argv, 'delim','|');
-
-$page_count = util::CommandLineOptionValue($argv, 'page_count',-1);
-$pageSize  = util::CommandLineOptionValue($argv, 'page_size',100);
-
-
-$DB = new DBO();
-
 $pageNumber = 0;
+$chunk = occurrences_by_page($name,$pageNumber,$pageSize);
 
-// field names to keep 
-$f = array(); 
-$f['basisOfRecord'] = '';
-$f['raw_scientificName'] = '';
-$f['decimalLatitude'] = '';
-$f['decimalLongitude'] = '';
-$f['geospatialKosher'] = '';
-$f['year'] = '';
-$f['month'] = '';
-
-
-
-$chunk = $DB->occurrences_by_page($name,0,1); // make one read to get number of records
-$totalRecords = $chunk['totalRecords'];
-
-// calc n umber pages required 
-$total_pages = $totalRecords / $pageSize;
-
-echo "totalRecords = $totalRecords   total_pages = $total_pages\n";
-
-$chunk = $DB->occurrences_by_page($name,$pageNumber,$pageSize);
-
-
-echo join($delim,array_keys($f))."\n";  // header
+echo "scientific_name{$delim}lat{$delim}lng{$delim}occurrence_date\n";  // header
 
 while ($pageNumber < $totalRecords) // lop while the size of the hunk is as big as the page
 {            
     
     foreach ($chunk['occurrences'] as $occurrence) 
     {
-        foreach (array_keys($f) as $column_key) 
-            echo array_util::Value($occurrence, $column_key, null, true).$delim;
+        
+        if (array_util::Value($occurrence, 'geospatialKosher') != "true")
+            continue; // check to see if even ALA belives that the point is valid
+        
+        if (array_util::Value($occurrence, 'basisOfRecord') != "HumanObservation")
+            continue; // check to see if even ALA belives that the point is valid
 
-        echo "\n";
+        echo "{$occurrence['scientificName']}{$delim}{$occurrence['decimalLatitude']}{$delim}{$occurrence['decimalLongitude']}{$delim}" .array_util::Value($occurrence, 'year'). "-".array_util::Value($occurrence, 'month')."-01\n";
 
     }
+    
+    
+    
     
     if ($page_count >= 0)
-    {
         if (($page_count -1 ) * $pageSize == $pageNumber) exit();
-    }
     
     $pageNumber += $pageSize;
-    $chunk = $DB->occurrences_by_page($name,$pageNumber,$pageSize);
+    $chunk = occurrences_by_page($name,$pageNumber,$pageSize);
     
 }
 
+exit();
 
-unset($DB);
+
+
+// =======================================================================================
+// ========= FUNCTIONS ===================================================================
+// =======================================================================================
+
+
+function occurrences_by_page($name = "",$pageNumber = 0,$pageSize = 100) 
+{
+    
+    $url = "http://biocache.ala.org.au/ws/webportal/occurrences?q={$name}&pageSize={$pageSize}&start={$pageNumber}";
+    
+    $f = @file_get_contents($url);
+    
+    if ($f === FALSE) // tried once and failed
+    {
+        $error_count = 0;
+        while ($error_count < 5 && $f === FALSE)      // lets try up to 5 times to get this segment
+        {
+            $f = @file_get_contents($url);
+        }
+        
+        if ($f === FALSE) 
+        {
+            echo "FAILED:: could not get occurrences data from [{$url}]";
+            exit();
+        }
+            
+            
+    }
+    
+    
+    $j = json_decode($f,true);
+
+    return  $j;
+
+}
+
+
+
+function usage($argv)
+{
+    
+    if ( !(!isset($argv[1]) ||  $argv[1] == "--help" || $argv[1] == "-h")) return;    
+    
+    echo " \n";
+    echo " {$argv[0]} [--delim=|] --name=SpeciesName       .... occurence points for this species \n";
+    echo " {$argv[0]} [--delim=|] --name=lsid:(ALA LSID)   .... use the accurate LSID from the species list\n";
+
+    echo " --delim='|'      .... column delimiter default '|'  \n";
+    echo " \n";
+    echo " --page_count=n   .... stop after this number of pages (useful for testing)\n";
+    echo " --page_size=100  .... each page of data is this many rows (tested to work up to 500 rows - becomes less responsive over this)\n";
+    echo " \n";
+    echo " --info_only=true .... disp;ay information about the results but NOT the results\n";
+    echo " \n";
+    
+    exit();    
+    
+    
+}
+
 
 
 ?>

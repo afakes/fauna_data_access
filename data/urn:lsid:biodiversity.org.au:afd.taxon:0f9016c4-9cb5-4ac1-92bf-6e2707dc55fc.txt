@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Abudefduf sordidus|-14.647266|145.488869|2008-09-01
+Abudefduf sordidus|-14.676955|145.445623|2008-09-01
+Abudefduf sordidus|-14.68348|145.463282|2004-08-01

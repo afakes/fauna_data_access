@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia acutata|-31.65833333|117.23805556|--01

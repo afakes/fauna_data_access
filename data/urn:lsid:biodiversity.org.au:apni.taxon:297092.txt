@@ -1,0 +1,7 @@
+scientific_name|lat|lng|occurrence_date
+Acacia drewiana|-32.18193|116.00606|1993-01-01
+Acacia drewiana|-32.18144|116.00558|1993-01-01
+Acacia drewiana|-32.22832|115.99522|1993-01-01
+Acacia drewiana|-32.22698|115.99698|1993-01-01
+Acacia drewiana|-32.23472|115.99833|1993-01-01
+Acacia drewiana subsp. drewiana|-32.01666667|115.95|--01

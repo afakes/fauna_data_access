@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia biflora|-34.63305556|118.2|1982-02-01

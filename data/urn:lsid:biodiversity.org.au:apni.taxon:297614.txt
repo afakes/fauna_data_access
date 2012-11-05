@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia insolita|-33.35972222|115.89305556|1976-05-01
+Acacia insolita subsp. insolita|-33.53333333|115.96666667|1995-03-01

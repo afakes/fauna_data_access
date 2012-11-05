@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia gregorii|-20.71666667|116.76666667|--01
+Acacia gregorii|-20.71666667|116.76666667|--01
+Acacia gregorii|-23.30527778|113.965|--01

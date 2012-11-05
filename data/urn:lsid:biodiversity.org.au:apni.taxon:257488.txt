@@ -1,0 +1,25 @@
+scientific_name|lat|lng|occurrence_date
+Acacia hyaloneura|-16.87915|137.8221|2008-09-01
+Acacia hyaloneura|-17.05498|137.72611|1998-10-01
+Acacia hyaloneura|-17.18189|135.53452|1991-04-01
+Acacia hyaloneura|-17.19815|137.69664|2008-09-01
+Acacia hyaloneura|-17.19854|137.70117|1986-09-01
+Acacia hyaloneura|-17.19882|137.69675|2005-06-01
+Acacia hyaloneura|-17.21521|137.6845|1987-06-01
+Acacia hyaloneura|-17.33188|136.38451|1948-07-01
+Acacia hyaloneura|-17.3504|129.98552|--01
+Acacia hyaloneura|-17.3994|130.12322|--01
+Acacia hyaloneura|-17.43189|136.00119|1948-07-01
+Acacia hyaloneura|-17.4394|130.02102|--01
+Acacia hyaloneura|-17.76009|129.62773|--01
+Acacia hyaloneura|-17.76399|129.67453|--01
+Acacia hyaloneura|-17.77189|129.73083|--01
+Acacia hyaloneura|-17.83949|129.41913|--01
+Acacia hyaloneura|-17.86979|129.43123|--01
+Acacia hyaloneura|-17.87919|129.46103|--01
+Acacia hyaloneura|-17.90849|129.43163|--01
+Acacia hyaloneura|-17.95089|129.70403|--01
+Acacia hyaloneura|-17.96179|129.67683|--01
+Acacia hyaloneura|-17.99649|129.52673|--01
+Acacia hyaloneura|-18.0094|129.90142|--01
+Acacia hyaloneura|-18.1178|130.00332|--01

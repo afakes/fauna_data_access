@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia chisholmii|-20.5028|134.79169|2006-06-01
+Acacia chisholmii|-20.88184|137.85119|1972-08-01
+Acacia chisholmii|-20.89854|137.86787|1948-04-01

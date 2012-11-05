@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia densiflora|-31.62972222|117.71333333|--01

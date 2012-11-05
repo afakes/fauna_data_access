@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Abudefduf lorenzi|-5.1666666666667|150.36666666667|--01
+Abudefduf lorenzi|-5.1666665077209|150.36666870117|--01

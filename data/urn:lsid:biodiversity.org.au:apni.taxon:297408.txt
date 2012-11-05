@@ -1,0 +1,5 @@
+scientific_name|lat|lng|occurrence_date
+Acacia glaucocaesia|-22|118.5|--01
+Acacia glaucocaesia|-22|118.5|--01
+Acacia glaucocaesia|-22|118.5|--01
+Acacia glaucocaesia|-22|118.5|--01

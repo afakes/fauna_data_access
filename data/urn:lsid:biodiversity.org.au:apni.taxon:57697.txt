@@ -1,0 +1,25 @@
+scientific_name|lat|lng|occurrence_date
+Acacia argyrophylla|-35.08559|139.07949|2004-10-01
+Acacia argyrophylla|-35.0821|139.09865|2004-10-01
+Acacia argyrophylla|-35.07342|139.10829|2004-10-01
+Acacia argyrophylla|-35.10498|139.22591|2004-11-01
+Acacia argyrophylla|-34.98461|139.06898|1989-09-01
+Acacia argyrophylla|-34.78548|137.75254|1985-04-01
+Acacia argyrophylla|-34.96119|139.14544|1995-06-01
+Acacia argyrophylla|-34.96119|139.14544|1991--01
+Acacia argyrophylla|-34.96119|139.14544|1971-10-01
+Acacia argyrophylla|-34.47807|139.271|1980-03-01
+Acacia argyrophylla|-32.83013|138.78879|1980-04-01
+Acacia argyrophylla|-34.19087|139.20116|1992-04-01
+Acacia argyrophylla|-34.70287|139.24973|1992-04-01
+Acacia argyrophylla|-34.75465|139.21742|1992-05-01
+Acacia argyrophylla|-34.96241|139.1505|1992-05-01
+Acacia argyrophylla|-35.07637|139.09054|2002-09-01
+Acacia argyrophylla|-35.05257|139.10195|2002-09-01
+Acacia argyrophylla|-35.03249|139.0072|2002-09-01
+Acacia argyrophylla|-34.96159|139.15004|2002-09-01
+Acacia argyrophylla|-34.96352|139.14975|2002-10-01
+Acacia argyrophylla|-34.71564|139.17228|2006-02-01
+Acacia argyrophylla|-34.70488|139.16597|2006-02-01
+Acacia argyrophylla|-34.69691|139.15994|2006-05-01
+Acacia argyrophylla|-35.16412|138.53257|2009-05-01

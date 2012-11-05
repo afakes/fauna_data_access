@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia crassiuscula var. angustifolia|-32.6|115.66666667|1986-07-01
+Acacia crassiuscula|-33.86666667|122.77166667|--01

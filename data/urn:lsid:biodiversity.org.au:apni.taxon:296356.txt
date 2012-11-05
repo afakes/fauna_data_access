@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia brachyclada|-33.65779999|120.24644997|2007-09-01
+Acacia brachyclada|-31.62972222|117.71333333|--01

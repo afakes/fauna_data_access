@@ -1,0 +1,5 @@
+scientific_name|lat|lng|occurrence_date
+Acacia chrysocephala|-33.6687667|120.19274997|2007-09-01
+Acacia chrysocephala|-33.67434997|120.22900002|2007-09-01
+Acacia chrysocephala|-34.58333333|118.21333333|1962-08-01
+Acacia chrysocephala|-34.62638889|117.665|--01

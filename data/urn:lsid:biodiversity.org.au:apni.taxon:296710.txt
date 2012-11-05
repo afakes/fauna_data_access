@@ -1,0 +1,15 @@
+scientific_name|lat|lng|occurrence_date
+Acacia convallium|-11.27336|132.34646|2005-02-01
+Acacia convallium|-11.39365|132.34233|2005-02-01
+Acacia convallium|-11.4635|132.22044|2005-08-01
+Acacia convallium|-11.53192|132.86786|1985-07-01
+Acacia convallium|-12.20319|133.80139|2002-08-01
+Acacia convallium|-12.45083|133.56389|2000-03-01
+Acacia convallium|-12.56526|133.38452|1978-06-01
+Acacia convallium|-12.7525|133.97389|2000-03-01
+Acacia convallium|-12.76525|133.73451|1984-04-01
+Acacia convallium|-12.78191|133.38452|1972-07-01
+Acacia convallium|-12.79329|133.09985|2004-08-01
+Acacia convallium|-12.82147|133.11887|1994-05-01
+Acacia convallium|-13.3503|132.98486|2009-03-01
+Acacia convallium|-13.43189|132.6512|1995-04-01

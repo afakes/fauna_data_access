@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia crassuloides|-33.68940001|120.29523332|2007-04-01

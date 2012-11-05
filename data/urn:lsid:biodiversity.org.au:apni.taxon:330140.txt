@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia incognita|-29.07325628|116.83932394|2005-09-01
+Acacia incognita|-28.72365179|116.23166931|2006-09-01

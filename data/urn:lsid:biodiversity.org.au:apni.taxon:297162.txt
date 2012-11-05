@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia errabunda|-33.6|120.1|1963-09-01

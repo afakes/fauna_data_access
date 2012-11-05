@@ -1,0 +1,5 @@
+scientific_name|lat|lng|occurrence_date
+Acacia ammophila|-28.1|144.35|1963-08-01
+Acacia ammophila|-28.1|144.35|1957-11-01
+Acacia ammophila|-28.1|144.35|1957-11-01
+Acacia ammophila|-28.1|144.35|1957-11-01

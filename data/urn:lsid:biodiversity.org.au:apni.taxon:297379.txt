@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia forsythii|-31.222934422018|148.97370408834|-01-01
+Acacia forsythii|-31.301126603609|148.99214086342|1967-01-01

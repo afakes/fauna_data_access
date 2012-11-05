@@ -1,0 +1,8 @@
+scientific_name|lat|lng|occurrence_date
+Acacia incrassata|-31.89972222|116|--01
+Acacia incrassata|-31.89972222|116|--01
+Acacia incrassata|-31.89972222|116|--01
+Acacia incrassata|-31.89972222|116|--01
+Acacia incrassata|-32.36666667|115.97305556|--01
+Acacia incrassata|-31.89972222|116|--01
+Acacia incrassata|-31.89972222|116|--01

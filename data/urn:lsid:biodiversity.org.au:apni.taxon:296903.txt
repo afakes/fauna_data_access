@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia dempsteri|-32.45166667|121.66833333|--01

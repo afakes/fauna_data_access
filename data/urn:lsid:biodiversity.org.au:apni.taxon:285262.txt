@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia cretacea|-33.41904|136.92543|2002-11-01

@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia grisea|-33.7|117.6|--01

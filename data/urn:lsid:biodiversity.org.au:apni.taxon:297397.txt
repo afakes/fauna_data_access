@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia gilbertii|-33.86|115.19833333|1973-03-01
+Acacia gilbertii|-34.32666667|115.15|--01
+Acacia gilbertii|-34.32666667|115.15|--01

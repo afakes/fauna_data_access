@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia inops|-33.9|115.2|--01

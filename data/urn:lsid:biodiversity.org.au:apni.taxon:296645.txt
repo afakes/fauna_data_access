@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Acacia comans|-29.43333333|115.63333333|--01
+Acacia comans|-29.43333333|115.63333333|--01

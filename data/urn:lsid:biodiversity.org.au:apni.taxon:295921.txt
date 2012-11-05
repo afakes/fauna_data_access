@@ -1,0 +1,13 @@
+scientific_name|lat|lng|occurrence_date
+Acacia alata|-33.36805|115.66213|1993-01-01
+Acacia alata var. alata|-35.0306|117.8444|1801-12-01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-34.31666667|116.02083333|1968-04-01
+Acacia alata var. alata|-35.03333333|117.88333333|--01
+Acacia alata var. biglandulosa|-28.19138889|114.23472222|--01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-35.05805556|117.89|--01
+Acacia alata var. alata|-35.05805556|117.89|--01

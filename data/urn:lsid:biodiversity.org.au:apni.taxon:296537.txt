@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia chrysella|-33.56234998|120.12893334|2007-03-01

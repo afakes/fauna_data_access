@@ -1,0 +1,3 @@
+scientific_name|lat|lng|occurrence_date
+Abortiporus biennis|-38.52972222|143.9780556|2007-07-01
+Abortiporus biennis|-37.77083333|145.0425|2009-04-01

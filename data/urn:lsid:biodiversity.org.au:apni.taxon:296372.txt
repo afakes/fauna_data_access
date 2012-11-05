@@ -1,0 +1,18 @@
+scientific_name|lat|lng|occurrence_date
+Acacia browniana|-33.69975|115.18295|1993-01-01
+Acacia browniana var. endlicheri|-34.65638889|117.64638889|--01
+Acacia browniana var. browniana|-34.74944444|118.27194444|1983-08-01
+Acacia browniana var. browniana|-34.92833333|117.91138889|1979-09-01
+Acacia browniana var. browniana|-34.92833333|117.91138889|1984-08-01
+Acacia browniana var. browniana|-34.89666667|118.26333333|1984-09-01
+Acacia browniana var. browniana|-34.91694444|118.01027778|1984-08-01
+Acacia browniana var. browniana|-34.84333333|117.60166667|1984-08-01
+Acacia browniana var. browniana|-34.81472222|118.14638889|1985-08-01
+Acacia browniana|-34.98666667|117.87972222|1982-09-01
+Acacia browniana var. browniana|-33.72638889|115.09444444|1977-06-01
+Acacia browniana|-33.79166667|115.60694444|1971-11-01
+Acacia browniana|-34.36666667|116.11666667|1968-02-01
+Acacia browniana|-34.30972222|116.01666667|1998-05-01
+Acacia browniana var. browniana|-33.58472222|115.0875|1977-06-01
+Acacia browniana var. endlicheri|-34.62638889|117.665|--01
+Acacia browniana|-34.76666667|117.49444444|1984-08-01

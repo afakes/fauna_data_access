@@ -1,0 +1,9 @@
+scientific_name|lat|lng|occurrence_date
+Acacia helmsiana|-29.14216|129.96064|1990--01
+Acacia helmsiana|-27|127|1891-09-01
+Acacia helmsiana|-25.08193|130.13464|1958-06-01
+Acacia helmsiana|-25.16527|130.36798|1978-09-01
+Acacia helmsiana|-25.1769|130.4119|2000-12-01
+Acacia helmsiana|-25.2172|131.3597|2007-08-01
+Acacia helmsiana|-25.23193|130.58463|1988-04-01
+Acacia helmsiana|-25.3486|130.45131|1974-09-01

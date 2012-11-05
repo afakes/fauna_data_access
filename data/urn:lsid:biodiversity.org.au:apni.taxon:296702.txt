@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia conniana|-34.1|123.18333333|--01
+Acacia conniana|-34.1|123.18333333|--01
+Acacia conniana|-34.1|123.18333333|--01

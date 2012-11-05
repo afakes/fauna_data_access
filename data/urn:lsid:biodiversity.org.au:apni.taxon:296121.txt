@@ -1,0 +1,8 @@
+scientific_name|lat|lng|occurrence_date
+Acacia arida|-15.46666667|128.1|--01
+Acacia arida|-20.77805556|117.14472222|--01
+Acacia arida|-20.77805556|117.14472222|--01
+Acacia arida|-15.46666667|128.1|--01
+Acacia arida|-22.67555556|118.30333333|--01
+Acacia arida|-22.67555556|118.30333333|--01
+Acacia arida|-15.46666667|128.1|--01

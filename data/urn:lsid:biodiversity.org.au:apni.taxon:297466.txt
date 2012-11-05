@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia heteroclita subsp. heteroclita|-34.075|119.52833333|--01

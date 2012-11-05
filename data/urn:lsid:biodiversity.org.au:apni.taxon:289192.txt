@@ -1,0 +1,2 @@
+scientific_name|lat|lng|occurrence_date
+Acacia derwentiana|-42.716673334732|146.91666041483|2000-09-01

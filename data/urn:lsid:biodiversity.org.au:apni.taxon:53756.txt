@@ -1,0 +1,22 @@
+scientific_name|lat|lng|occurrence_date
+Abutilon theophrasti|-34.03897|139.67843|2006-01-01
+Abutilon theophrasti|-34.03897|139.67843|2007-02-01
+Abutilon theophrasti|-34.03526|139.68114|2007-02-01
+Abutilon theophrasti|-34.04056|139.68211|2006-01-01
+Abutilon theophrasti|-34.04056|139.68211|2007-02-01
+Abutilon theophrasti|-34.04175|139.68289|2006-01-01
+Abutilon theophrasti|-34.04175|139.68289|2007-02-01
+Abutilon theophrasti|-34.32718|140.56373|2005-04-01
+Abutilon theophrasti|-34.32718|140.56373|2006-05-01
+Abutilon theophrasti|-34.32718|140.56373|2007-02-01
+Abutilon theophrasti|-34.33087|140.56416|2006-05-01
+Abutilon theophrasti|-34.64466|139.3709|1990--01
+Abutilon theophrasti|-33.636307839372|147.40459274606|2001-02-01
+Abutilon theophrasti|-30.288431067743|149.30087738416|1996-02-01
+Abutilon theophrasti|-34.764287424852|146.57383191819|1990-02-01
+Abutilon theophrasti|-34.764287424852|146.57383191819|1995-09-01
+Abutilon theophrasti|-34.03457|139.68685|1999-05-01
+Abutilon theophrasti|-34.64466|139.3709|1997-02-01
+Abutilon theophrasti|-36.0669|140.17851|1991-10-01
+Abutilon theophrasti|-34.94213|138.70666|1977-10-01
+Abutilon theophrasti|-34.382739206185|142.40316094866|1991-04-01

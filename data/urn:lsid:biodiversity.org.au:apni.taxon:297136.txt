@@ -1,0 +1,4 @@
+scientific_name|lat|lng|occurrence_date
+Acacia enervia|-31.67236875|119.55591165|1994-10-01
+Acacia enervia subsp. enervia|-31.53972222|118.04805556|--01
+Acacia enervia subsp. enervia|-31.53972222|118.04805556|--01
