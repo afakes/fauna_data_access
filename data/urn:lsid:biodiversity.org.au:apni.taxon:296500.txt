@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia celastrifolia|-32.93333333|116.45|1986-09-01

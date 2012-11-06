@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia betchei|-29.520612716675|151.39074707031|2006-02-01

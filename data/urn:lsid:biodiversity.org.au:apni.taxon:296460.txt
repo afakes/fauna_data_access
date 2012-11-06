@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia calcarata|-30.95305556|121.16138889|--01

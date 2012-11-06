@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Aacanthocnema dobsoni|-42.112904366424|147.10175264912|1997-05-01

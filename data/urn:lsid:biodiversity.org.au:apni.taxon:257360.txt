@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia adenogonia|-15.31166667|124.855|--01

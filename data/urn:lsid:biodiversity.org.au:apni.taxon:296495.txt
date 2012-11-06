@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia castanostegia|-32.7|119.8|1996-09-01
-Acacia castanostegia|-32.7|119.8|1996-09-01
-Acacia castanostegia|-32.7|119.8|1996-09-01

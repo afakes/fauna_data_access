@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia acellerata|-34.31666667|117.65|--01

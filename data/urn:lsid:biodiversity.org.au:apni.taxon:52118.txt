@@ -1,6 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Abelmoschus manihot|-12.27|134.83472|2000-07-01
-Abelmoschus manihot|-12.34858|134.9345|1987-06-01
-Abelmoschus manihot|-12.36607|134.90916|--01
-Abelmoschus manihot|-13.05269|130.49709|--01
-Abelmoschus manihot|-13.15079|130.23019|--01

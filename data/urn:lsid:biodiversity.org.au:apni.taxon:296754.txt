@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia curvata|-33.66110003|120.39650003|2007-05-01

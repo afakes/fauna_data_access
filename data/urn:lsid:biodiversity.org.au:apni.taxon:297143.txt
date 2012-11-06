@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia ephedroides|-31.89972222|116.33305556|1839-09-01
-Acacia ephedroides|-31.89972222|116.33305556|1839-09-01

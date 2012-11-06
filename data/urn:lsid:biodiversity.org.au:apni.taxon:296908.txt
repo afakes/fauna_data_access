@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia dermatophylla|-33.70666665|120.29100004|2007-04-01
-Acacia dermatophylla|-33.67394999|120.24166667|2007-09-01

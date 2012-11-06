@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia drepanophylla|-26.4|114.5|1982-05-01
-Acacia drepanophylla|-26.7|114.6|1982-05-01
-Acacia drepanophylla|-26.7|114.6|1981-07-01

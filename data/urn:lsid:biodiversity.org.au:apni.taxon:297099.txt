@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia drummondii subsp. elegans|-34.73333333|117.91666667|1983-09-01
-Acacia drummondii subsp. elegans|-34.33333333|117.91666667|1973-08-01
-Acacia drummondii|-34.58333333|118.21333333|1962-08-01

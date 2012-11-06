@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia donaldsonii|-28.95|118.09555556|--01

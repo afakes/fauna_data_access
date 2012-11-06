@@ -1,5 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Abudefduf septemfasciatus|-14.681224|145.44695|2006-04-01
-Abudefduf septemfasciatus|-14.666293|145.44294|2009-04-01
-Abudefduf septemfasciatus|-14.677532|145.444651|2005-02-01
-Abudefduf septemfasciatus|-14.68348|145.463282|2004-08-01

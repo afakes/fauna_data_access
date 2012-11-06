@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia intorta|-24.41666667|118.93333333|1982-05-01

@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia desertorum var. desertorum|-30.95305556|121.16138889|--01
-Acacia desertorum var. desertorum|-29.55694444|124.63333333|1891-09-01

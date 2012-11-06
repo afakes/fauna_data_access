@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia blaxellii|-32.26842978|120.53909585|1994-09-01
-Acacia blaxellii|-32.26326314|120.5328458|1994-09-01

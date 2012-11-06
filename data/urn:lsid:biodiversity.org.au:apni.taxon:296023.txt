@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia anaticeps|-20.39111111|120.02416667|1987-07-01

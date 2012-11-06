@@ -1,8 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Abyssorchomene rossi|-65.633331298828|125.23332977295|--01
-Abyssorchomene rossi|-65.684997558594|125.58556365967|--01
-Abyssorchomene rossi|-65.98388671875|57.152221679688|--01
-Abyssorchomene rossi|-69|69|--01
-Abyssorchomene rossi|-65.633331298828|125.23332977295|--01
-Abyssorchomene rossi|-65.684997558594|125.58556365967|--01
-Abyssorchomene rossi|-69.800003051758|161.81666564941|--01

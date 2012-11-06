@@ -1,6 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Abutilon grandifolium|-35.272598266602|150.48396301269|2008-02-01
-Abutilon grandifolium|-33.763706207275|151.24478149414|2007-10-01
-Abutilon grandifolium|-33.319019317627|151.29811096191|2009-12-01
-Abutilon grandifolium|-28.40119901392|152.67638730738|1991-04-01
-Abutilon grandifolium|-23.69856|133.91793|1993-11-01

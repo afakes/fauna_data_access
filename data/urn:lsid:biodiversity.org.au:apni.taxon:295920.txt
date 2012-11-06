@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia aestivalis|-31.87833333|116.75833333|1840-04-01
-Acacia aestivalis|-31.87833333|116.75833333|1840-04-01

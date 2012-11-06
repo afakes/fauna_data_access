@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia heteroneura var. jutsonii|-29.94|121.11638889|--01
-Acacia heteroneura var. jutsonii|-29.94|121.11638889|--01
-Acacia heteroneura var. jutsonii|-29.94|121.11638889|--01

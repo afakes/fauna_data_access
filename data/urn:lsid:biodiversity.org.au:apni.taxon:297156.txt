@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia ericifolia|-31.98333333|115.83138889|1839-06-01

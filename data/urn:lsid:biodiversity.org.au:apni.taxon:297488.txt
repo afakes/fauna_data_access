@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia horridula|-32|115.8|--01
-Acacia horridula|-32|115.9|1839-12-01
-Acacia horridula|-32|115.9|1839-12-01

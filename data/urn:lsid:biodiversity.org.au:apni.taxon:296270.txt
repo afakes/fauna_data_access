@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia benthamii|-32|115.8|--01
-Acacia benthamii|-32|115.8|--01

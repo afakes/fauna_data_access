@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia intricata|-32.73704357|119.81217523|1996-09-01
-Acacia intricata|-32.60914315|119.73307366|1996-09-01
-Acacia intricata|-32.76434365|119.83747587|1996-09-01

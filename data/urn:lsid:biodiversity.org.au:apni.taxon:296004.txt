@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia amentifera|-16.4985933095|130.667905463|1856-01-01
-Acacia amentifera|-16.4985933095|130.667905463|1856-01-01
-Acacia amentifera|-16.49859|130.6679|--01

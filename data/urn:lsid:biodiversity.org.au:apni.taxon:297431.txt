@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia hadrophylla|-32.54403033|120.74951876|1994-09-01

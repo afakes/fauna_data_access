@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Ablabesmyia notabilis|-41.78183552092|148.25645209981|1987-01-01

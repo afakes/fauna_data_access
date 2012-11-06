@@ -1,4 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia cremiflora|-33.221388642808|149.1997738988|2005-04-01
-Acacia cremiflora|-33.204055786133|148.52781677246|2008-12-01
-Acacia cremiflora|-33.202255249023|148.5378112793|2008-12-01

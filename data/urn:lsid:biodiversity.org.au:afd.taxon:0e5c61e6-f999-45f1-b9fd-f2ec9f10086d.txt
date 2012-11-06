@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Aaptos aaptos|-14.650183|145.447232|1994-04-01

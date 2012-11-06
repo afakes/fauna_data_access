@@ -1,7 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia crispula|-33.51524997|120.04373331|2007-10-01
-Acacia crispula|-33.67434997|120.22900002|2007-09-01
-Acacia crispula|-33.66774998|120.20461665|2007-09-01
-Acacia crispula|-34.48638889|117.59638889|--01
-Acacia crispula|-34.58333333|118.73888889|1986-09-01
-Acacia crispula|-34.36666667|118.75|1983-10-01

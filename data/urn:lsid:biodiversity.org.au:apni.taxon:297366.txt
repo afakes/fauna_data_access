@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia flabellifolia|-29.4|115.6|--01
-Acacia flabellifolia|-29.4|115.6|--01

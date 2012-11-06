@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia brachyphylla var. brachyphylla|-32.67814321|119.78047483|1996-09-01
-Acacia brachyphylla var. brachyphylla|-32.6775432|119.78177481|1996-09-01

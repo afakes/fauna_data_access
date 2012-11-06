@@ -24,6 +24,9 @@ $pageSize   = util::CommandLineOptionValue($argv, 'page_size',500);     // defau
 
 $info_only   = util::CommandLineOptionValue($argv, 'info_only',false);  // return info about the search BUT nosearch results
 
+$HumanObservation    = util::CommandLineOptionValue($argv, 'HumanObservation',false);  // return info about the search BUT nosearch results
+
+
 
 $chunk = occurrences_by_page($name,0,1); // make one read to get number of records
 $totalRecords = $chunk['totalRecords'];
@@ -49,14 +52,15 @@ while ($pageNumber < $totalRecords) // lop while the size of the hunk is as big 
         if (array_util::Value($occurrence, 'geospatialKosher') != "true")
             continue; // check to see if even ALA belives that the point is valid
         
-        if (array_util::Value($occurrence, 'basisOfRecord') != "HumanObservation")
-            continue; // check to see if even ALA belives that the point is valid
+        
+        if ($HumanObservation)  // if they have asked to check only for HumanObservation's
+            if (array_util::Value($occurrence, 'basisOfRecord') != "HumanObservation")
+                continue; // check to see if even ALA belives that the point is valid
 
-        echo "{$occurrence['scientificName']}{$delim}{$occurrence['decimalLatitude']}{$delim}{$occurrence['decimalLongitude']}{$delim}" .array_util::Value($occurrence, 'year'). "-".array_util::Value($occurrence, 'month')."-01\n";
-
+        echo "".array_util::Value($occurrence, 'basisOfRecord')."{$delim}{$occurrence['scientificName']}{$delim}{$occurrence['decimalLatitude']}{$delim}{$occurrence['decimalLongitude']}{$delim}" .array_util::Value($occurrence, 'year'). "-".array_util::Value($occurrence, 'month')."-01\n";
+        
+        
     }
-    
-    
     
     
     if ($page_count >= 0)
@@ -118,13 +122,16 @@ function usage($argv)
     echo " {$argv[0]} [--delim=|] --name=SpeciesName       .... occurence points for this species \n";
     echo " {$argv[0]} [--delim=|] --name=lsid:(ALA LSID)   .... use the accurate LSID from the species list\n";
 
-    echo " --delim='|'      .... column delimiter default '|'  \n";
+    echo " --delim='|'              .... column delimiter default '|'  \n";
     echo " \n";
-    echo " --page_count=n   .... stop after this number of pages (useful for testing)\n";
-    echo " --page_size=100  .... each page of data is this many rows (tested to work up to 500 rows - becomes less responsive over this)\n";
+    echo " --page_count=-1          .... stop after this number of pages (useful for testing)\n";
+    echo " --page_size=100          .... each page of data is this many rows (tested to work up to 500 rows - becomes less responsive over this)\n";
     echo " \n";
-    echo " --info_only=true .... disp;ay information about the results but NOT the results\n";
+    echo " --info_only=true         .... disp;ay information about the results but NOT the results\n";
+    echo " --HumanObservation=false .... disp;ay information about the results but NOT the results\n";
     echo " \n";
+    
+    
     
     exit();    
     

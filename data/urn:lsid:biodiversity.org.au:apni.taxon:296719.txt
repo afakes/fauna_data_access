@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia costiniana|-35.277|149.109|2001-07-01
-Acacia costiniana|-35.744384863622|149.26310219344|2002-05-01

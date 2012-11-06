@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia excentrica|-33.30472222|123.37972222|1975-09-01

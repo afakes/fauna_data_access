@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia fragilis|-31.64472222|117.48166667|--01
-Acacia fragilis|-31.65833333|117.23805556|--01

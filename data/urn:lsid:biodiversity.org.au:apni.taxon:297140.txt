@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia ensifolia|-27.21666667|144.36666667|1957-11-01

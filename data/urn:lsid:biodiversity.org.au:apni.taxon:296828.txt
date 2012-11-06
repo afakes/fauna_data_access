@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia daviesioides|-29.22743333|116.24253889|2005-10-01
-Acacia daviesioides|-29.25483889|116.25305|2005-10-01

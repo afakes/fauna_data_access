@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia didyma|-26.1|113.2|1822-01-01

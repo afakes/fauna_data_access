@@ -1,7 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia divergens|-33.70592|115.18695|1993-01-01
-Acacia divergens|-34.31666667|116.01527778|1968-05-01
-Acacia divergens|-34.33333333|115.99722222|1969-01-01
-Acacia divergens|-33.59|115.0225|--01
-Acacia divergens|-33.755|115.32333333|--01
-Acacia divergens|-33.755|115.32333333|--01

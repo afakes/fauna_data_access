@@ -1,3 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Acacia coriacea subsp. coriacea|-25.92166667|113.53138889|--01
-Acacia coriacea|-23.35138889|119.73|1981-05-01

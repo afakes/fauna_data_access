@@ -1,2 +1,0 @@
-scientific_name|lat|lng|occurrence_date
-Abelia x grandiflora|-43.371319164206|146.1311839417|1993-11-01
