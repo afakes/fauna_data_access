@@ -26,7 +26,6 @@ if ($name == '')
 
 $name_as_folder = util::CommandLineOptionValue($argv, 'name_as_folder',false);
 
-
 $output = util::CommandLineOptionValue($argv, 'output','');     // default is  -1  download all pages
 if (!$name_as_folder)
     if (file_exists($output)) 
@@ -37,31 +36,11 @@ if (!$name_as_folder)
 
 $page_count = util::CommandLineOptionValue($argv, 'page_count',-1);       // default is  -1  download all pages
 $page_size  = util::CommandLineOptionValue($argv, 'page_size',500);       // default is 100 rows per page
-
 $decode     = util::CommandLineOptionValue($argv, 'decode',false);        // decode JSON into a PHP PRINT_R format
 
 
-$chunk = occurrences_by_page($name,0,1); // make one read to get number of records
-$totalRecords = $chunk['totalRecords'];
+get_json_data($name,$page_count,$page_size,$output,$decode,$name_as_folder);
 
-
-if ($page_count == -1) $page_count = ceil($totalRecords / $page_size);  // we didn't set  page count so set to highest possible
-
-$pageIndex = 0;
-$part_number = 0;
-
-while ($part_number < $page_count )  // lop while the size of the hunk is as big as the page
-{            
-    echo "Get Part {$part_number}\n";
-    
-    $chunk = occurrences_by_page($name,$pageIndex,$page_size);
-    write_row($name,$output,$decode,$chunk,$part_number,$name_as_folder);
-        
-    
-    $pageIndex += $page_size;
-    $part_number++;
-    
-}
 
 exit();
 
@@ -69,6 +48,33 @@ exit();
 // =======================================================================================
 // ========= FUNCTIONS ===================================================================
 // =======================================================================================
+
+
+function get_json_data($name,$page_count,$page_size,$output,$decode,$name_as_folder)
+{
+    
+    $chunk = json_decode(occurrences_by_page($name,0,1),true); // make one read to get number of records
+    
+    $totalRecords = $chunk['totalRecords'];
+    
+    if ($page_count == -1) $page_count = ceil($totalRecords / $page_size);  // we didn't set  page count so set to highest possible
+    
+    $pageIndex = 0;
+    $part_number = 0;
+
+    while ($part_number < $page_count )  // lop while the size of the hunk is as big as the page
+    {            
+        
+        $chunk = occurrences_by_page($name,$pageIndex,$page_size);
+        write_row($name,$output,$decode,$chunk,$part_number,$name_as_folder);
+
+        $pageIndex += $page_size;
+        $part_number++;
+
+    }    
+    
+    
+}
 
 
 function write_row($name,$output,$decode,$chunk,$part_number,$name_as_folder)
