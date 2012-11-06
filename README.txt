@@ -205,16 +205,15 @@ WARNING:: THis would probably take too long and would probably fail.
 but a way to do it would be to break it up, with ALA you can request parts of the download.
 so you could request say 2000 rows at a time
 
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
 
 then each GZ file would contain 2000 rows of data 
 
 
-
-
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=10000&start=0
 
 
 
