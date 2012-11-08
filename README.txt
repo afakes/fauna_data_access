@@ -195,15 +195,17 @@ a CSV structured file , one header line and multiple data lines separated by COM
 
 
 
-If you want to download the entire locations database for Animals
+
+If you want to download the entire locations database for Animals (ANIMALIA)
 --------------------------------------------------------------------------------
      http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
 
-WARNING:: THis would probably take too long and would probably fail.
+
+WARNING:: This would WILL take too long and would probably fail. If you are running it from a web page 
+          and waiting for apache to return it WILL die. so DON'T do it.
 
 
-but a way to do it would be to break it up, with ALA you can request parts of the download.
-so you could request say 2000 rows at a time
+but a way to do it would be to break it up, with ALA you can request parts of the download. so you could request say 2000 rows at a time
 
      http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
      http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
@@ -212,8 +214,45 @@ so you could request say 2000 rows at a time
 
 then each GZ file would contain 2000 rows of data 
 
+- I have tested 100000 rows and it downloads badly, 
 
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=10000&start=0
+
+I have tested 50,000 rows and it downloads happily, so the lines below would download the first 150000 rows of  ANIMALIA
+
+
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+
+
+So the next step would be to automate this so it downloads the whole lot. 
+
+
+
+
+AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
+=======================================================================
+using WGET is a much safer and useful way to download webpages and other files from the net/
+
+
+    
+    
+    eg.  wget -O example.html http://www.electrictoolbox.com/wget-save-different-filename/
+
+         this line will save the page page / file at "http://www.electrictoolbox.com/wget-save-different-filename/" 
+         to a local file named "example.html"
+
+
+
+So if we want to download the location data for Animals (ANIMALIA)
+
+     wget -O occurence_ANIMALIA_00000000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+     wget -O occurence_ANIMALIA_00100000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+     wget -O occurence_ANIMALIA_00150000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+
+
+
+
 
 
 
