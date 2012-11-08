@@ -54,14 +54,13 @@ $pageSize   = util::CommandLineOptionValue($argv, 'page_size',50000);   // defau
 
 
 
-
-
 $pageNumber = 0;
 
 while ($pageNumber < $totalRecords) // loop while the size of the hunk is as big as the page
 {            
 
     $chunk_result = occurrences_by_page($name,$output_folder,$pageNumber) ;
+    
     if (is_null($chunk_result))
     {
         echo "FAILED:: download data for {$name} \n";
@@ -75,6 +74,23 @@ while ($pageNumber < $totalRecords) // loop while the size of the hunk is as big
     
 }
 
+
+$csv_filename = gz2csv($name,$output_folder);
+
+if (!file_exists($csv_filename)) 
+{    
+    echo "FAILED:: could not create CSV from files in  {$output_folder} using name = {$name} \n";
+    exit();
+}
+
+echo "CREATED CSV:: {$csv_filename}\n";
+    
+
+// need to process CSV, some of the rows dDO NOT contain Lat & long so they are usless.
+
+
+
+
 exit();
 
 
@@ -82,6 +98,42 @@ exit();
 // =======================================================================================
 // ========= FUNCTIONS ===================================================================
 // =======================================================================================
+
+function gz2csv($name,$output_folder)
+{
+    
+    echo "CREATING FULL CSV file for {$name} \n";
+
+    // loop thru all csv files that match "{$output_folder}/{$name}*"
+
+    $pattern = "{$output_folder}/{$name}*.gz";
+    $pattern = str_replace("//", "/", $pattern);
+
+    $csv_filename = "{$output_folder}/{$name}.csv";
+    $csv_filename = str_replace("//", "/", $csv_filename);
+
+    
+    $files = file::LS($pattern,null,true);
+
+    if (count($files) <= 0)
+    {
+        echo "FAILED:: could not find any files matching pattern  {$pattern}\n";
+        exit();        
+    }
+    
+    file::Delete($csv_filename);  
+    
+    foreach ($files as $filename) 
+    {        
+        $cmd = "gunzip -c '$filename' | grep -v '^,,' >> $csv_filename";        
+        echo "$cmd\n";
+        exec($cmd);
+    }
+    
+    return $csv_filename;
+    
+}
+
 
 
 function occurrences_by_page($name,$output_folder,$pageNumber = 0,$pageSize = 50000,$fileds = "longitude,latitude,year,month,raw_taxon_name,names_and_lsid") 
@@ -97,7 +149,7 @@ function occurrences_by_page($name,$output_folder,$pageNumber = 0,$pageSize = 50
     
     if (file_exists($output_filename)) return  $output_filename;
     
-    
+    sleep(2);
     return  file::wget($url, $output_filename,true);
 
 }
