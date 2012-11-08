@@ -17,6 +17,8 @@ if ($name == '')
     exit();
 }
 
+$connection_sleep = util::CommandLineOptionValue($argv, 'connection_sleep',10);
+
 
 $info_only  = util::CommandLineOptionValue($argv, 'info_only',false);  // return info about the search BUT nosearch results
 if ($info_only)
@@ -59,7 +61,7 @@ $pageNumber = 0;
 while ($pageNumber < $totalRecords) // loop while the size of the hunk is as big as the page
 {            
 
-    $chunk_result = occurrences_by_page($name,$output_folder,$pageNumber) ;
+    $chunk_result = occurrences_by_page($name,$output_folder,$connection_sleep,$pageNumber) ;
     
     if (is_null($chunk_result))
     {
@@ -136,7 +138,7 @@ function gz2csv($name,$output_folder)
 
 
 
-function occurrences_by_page($name,$output_folder,$pageNumber = 0,$pageSize = 50000,$fileds = "longitude,latitude,year,month,raw_taxon_name,names_and_lsid") 
+function occurrences_by_page($name,$output_folder,$connection_sleep , $pageNumber = 0,$pageSize = 50000,$fileds = "longitude,latitude,year,month,raw_taxon_name,names_and_lsid") 
 {
     
     $url="http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q={$name}&fl={$fileds}&pageSize={$pageSize}&start={$pageNumber}";
@@ -149,7 +151,9 @@ function occurrences_by_page($name,$output_folder,$pageNumber = 0,$pageSize = 50
     
     if (file_exists($output_filename)) return  $output_filename;
     
-    sleep(2);
+    echo "waiting for connection to sleep out {$connection_sleep} seconds \n";
+    sleep($connection_sleep);
+    
     return  file::wget($url, $output_filename,true);
 
 }
@@ -182,6 +186,10 @@ function usage($argv)
     echo " --info_only=true         .... display information about the results but NOT the results\n";
     echo " --count_only=true        .... display record count only - no data\n";
     echo " \n";
+    echo " --connection_sleep=10    .... Number of seconds to wait before requesting next page of data\n";
+    echo " \n";
+    
+    
     
     
     exit();    
