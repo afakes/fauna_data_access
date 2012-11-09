@@ -2,81 +2,162 @@ fauna_data_access
 =================
 
 
+    Table of Contents
+    =================
 
-The idea behind this project is to allow API / programmatic access to ALA species data.
-Atlas of Living Australia (ALA) - http://www.ala.org.au/
+    SECTION 1 - Information
+    -------------------------------------------------
+        1.1) Project description 
 
-it takes time to understand how the data is organised and how to get a hold of a specific piece of data,
-so I have put together some PHP scripts that can be used to extract data you want.
+        1.2) REFERENCE 
+
+        1.3) CODE REPOSITORY
+
+        1.4) OPERATING SYSTEM
+             * Virtualbox
+
+        1.5) Command line programs 
+
+        1.6) Other software 
+             * APT-GET
+             * Other useful softwares
 
 
-Main things you will want to do are:
 
-* Species Names        - a list of species names and their associated unique ID's as per ALA
+    SECTION 2 - Atlas of Living Australia URLs
+    -------------------------------------------------
 
-* Species Information  - Information stored by ALA for a Species / query
+        2.1) Direct ALA URL's
+            2.1.1) example:: get the  latitude & longitude  
 
-* Locations            - Latitude and Longitude of species occurences 
+            2.1.2) example URLs
+                a) Get all location points for 'macropus'
+                b) Get all location points for 'Red Kangaroo'
+                c) Get all location points for 'Macropus rufus'  using it's Life Science Identifier  (LSID)
+
+
+            2.1.3) Field Names 
+
+            2.1.4) the resultant unGZipped file
+
+            2.1.5) the CSV file structure.
+
+
+        2.2) DOWNLOAD OF DATA FROM Atlas of Living Australia
+             * Warning on requesting too much data 
+             * Requesting data blocks
+
+
+    SECTION 3 - BULK DATA ACCESS
+    -------------------------------------------------
+        * AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
+            * wget
+
+        * PHP SCRIPTS
+            * occurences.php
+            .... example usage 
+            .... output  (gz, csv)
+
+            * 
 
 
 
 
-REFERENCE
 =======================================================================
-ALA offers excellent webservices  - 
-        http://www.ala.org.au/about-the-atlas/downloadable-tools/web-services/
-        http://spatial.ala.org.au/ws/
-
-
-
-CODE REPOSITORY
+=======            SECTION 1 - Information                      ======= 
 =======================================================================
-PHP code is available from "git-hub" ...............  https://github.com/afakes/fauna_data_access
-
-note: if you plan to use this code directly then 
-you will also need the Utilities project as well  ..  https://github.com/afakes/utilities
 
 
 
-OPERATING SYSTEM
+1.1)  Project description 
 =======================================================================
-Linux variant  .... This project was built with Debian, 
-                    (I would recommend Debian or Ubuntu)
-                            
-    
-if you like Windows and want to keep it, I would suggest you setup Virtualbox 
-(an open source virtual machine environment) and run Debian inside it.
 
-https://www.virtualbox.org/
-https://www.virtualbox.org/wiki/Downloads
+    The idea behind this project is to allow API / programmatic access to ALA species data.
+    Atlas of Living Australia (ALA) - http://www.ala.org.au/
+
+    it takes time to understand how the data is organised and how to get a hold of a specific piece of data,
+    so I have put together some PHP scripts that can be used to extract data you want.
 
 
-If you want to find a prebuilt Debian mage have a look here -  
-site:: http://virtualboxes.org/images/debian/
+    Main things you will want to do are:
 
+    * Species Names        - a list of species names and their associated unique ID's as per ALA
 
-            Debian GNU/Linux 6.0.6 alias squeeze
-            Size (compressed/uncompressed): 1.8 GBytes / 5.16 GBytes
+    * Species Information  - Information stored by ALA for a Species / query
 
-            Link: http://downloads.sourceforge.net/virtualboximage/debian_6.0.6.vdi.7z
-
-            Active user account(s)      username  password
-                                        -------------------------
-                                        root      toor
-                                        debian    reverse
-
-            Notes: GNOME desktop environment, Guest Additions installed
+    * Locations            - Latitude and Longitude of species occurences 
 
 
 
 
 
-Command line programs 
+1.2) REFERENCE (sites for this data)
+=======================================================================
+    Atlas of Living Australia: 
+                    http://www.ala.org.au/
+
+    web services:
+                    http://www.ala.org.au/about-the-atlas/downloadable-tools/web-services/
+                    http://spatial.ala.org.au/ws/
+
+
+
+1.3) CODE REPOSITORY
+=======================================================================
+    PHP code is available from "git-hub" ...............  https://github.com/afakes/fauna_data_access
+
+    note: if you plan to use this code directly then 
+    you will also need the Utilities project as well  ..  https://github.com/afakes/utilities
+
+
+
+
+1.4) OPERATING SYSTEM
+=======================================================================
+    Linux variant  .... This project was built with Debian, 
+                        (I would recommend Debian or Ubuntu)
+
+
+    if you like Windows and want to keep it, I would suggest you setup Virtualbox 
+    (an open source virtual machine environment) and run Debian inside it.
+
+
+    Virtualbox
+    ----------
+
+    https://www.virtualbox.org/
+    https://www.virtualbox.org/wiki/Downloads
+
+
+    If you want to find a prebuilt Debian mage have a look here -  
+    site:: http://virtualboxes.org/images/debian/
+
+
+                Debian GNU/Linux 6.0.6 alias squeeze
+                Size (compressed/uncompressed): 1.8 GBytes / 5.16 GBytes
+
+                Link: http://downloads.sourceforge.net/virtualboximage/debian_6.0.6.vdi.7z
+
+                Active user account(s)      username  password
+                                            -------------------------
+                                            root      toor
+                                            debian    reverse
+
+                Notes: GNOME desktop environment, Guest Additions installed
+
+
+
+
+
+1.4) Command line programs 
 =======================================================================
     I have written this php scripts to work under a Linux environment and expect 
-    standard Linux commands to be available. to setup PHP to run in Linux is quote simple
+    standard Linux commands to be available. To setup PHP to run in Linux is quite simple
     once you are at the Linux prompt
     
+
+    APT-GET - How to install programs in Debian
+    ----------------------------------------------
 
         jc166922@afakes:~$
 
@@ -131,32 +212,33 @@ Command line programs
 
 
 
-    Now you know how to install with 'apt-get' other items you may want to install:
-    -------------------------------------------------------------------------------
-    apache Web server::                apt-get install apache
-
-    terminal quick text editor::       apt-get install nano     
-
-    simple graphic text editor::       apt-get install gedit
-
-    terminal directory tree::          apt-get install tree 
-
-    GIT-HUB code access::              apt-get install git
-
-    downdload urls to files::          apt-get install wget
+    Other useful softwares
+    ----------------------
+        Now you know how to install with 'apt-get' other items you may want to install:
+    
+        apache Web server::                apt-get install apache
+        terminal quick text editor::       apt-get install nano     
+        simple graphic text editor::       apt-get install gedit
+        terminal directory tree::          apt-get install tree 
+        GIT-HUB code access::              apt-get install git
+        download urls to files::           apt-get install wget
 
 
 
-Other software 
+1.5) Other software 
 =======================================================================
 
-Netbeans::  This must be one of the best development environments  http://netbeans.org/
-            When you download, either the PHP only or the full version.
+    Netbeans::  This must be one of the best development environments  http://netbeans.org/
+                When you download, either the PHP only or the full version.
+
+
+=======================================================================
+=======            Atlas of Living Australia - URLs             ======= 
+=======================================================================
 
 
 
-
-Direct ALA URL's
+2.1) Direct ALA URL's
 =======================================================================
     If you want to get the data yourself direct of ALA, below are some URLs 
     and what they can get you. Some URls' and their example data output.
@@ -176,13 +258,13 @@ Direct ALA URL's
 
         This quickest way to download the whole lot is to request it as a gZipped (GZ) file and then undo that file later.
 
+
         NOTE: I have tested a few ways to do this via JSON data blocks and others and the 
-            GZ file is by far the fastest
+              GZ file is by far the fastest
 
-
-    the URL
-    -------
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=macropus&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+    
+        the URL:: http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=macropus&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+        -------
 
         This URL would return you a GZipped file conatining all known locations (that ALA knows about) 
         with the columns "names_and_lsid, raw_taxon_name, basis_of_record, longitude, latitude"
@@ -321,8 +403,9 @@ Direct ALA URL's
 
 
 
-        the result (unGZipped)
-        ----------------------
+        the resultant unGZipped file
+        ----------------------------
+
             a CSV structured file , one header line and multiple data lines separated by COMMA ',', and text enclosed in QUOTES '"'
             (if you are using a web browser to download the file, the default filename is 'occurences.gz'
 
@@ -364,113 +447,147 @@ Direct ALA URL's
 
 
 
-DOWNLOAD OF DATA FROM Atlas of Living Australia
+2.2) DOWNLOAD OF DATA FROM Atlas of Living Australia
 =======================================================================
-    If you want to download the entire locations database for Animals (ANIMALIA)
+
+    Warning on requesting too much data 
+    -----------------------------------
+
+        If you want to download the entire locations database for Animals (ANIMALIA)
+
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
+
+        ########  DON'T DO THIS  ########  
 
 
-    http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
-
-    ########  DON'T DO THIS  ########  
-
-    WARNING:: This WILL take too long and will probably fail. If you are running it from a web page 
-              and waiting for apache to return it WILL die.   
+        WARNING:: This WILL take too long and will probably fail. If you are running it from a web page 
+                and waiting for apache to return it WILL die.   
 
 
+    Requesting data blocks
+    ----------------------
+
+        a way to do it would be to break it up, with ALA you can request parts of the download. so you could request say 2000 rows at a time
+
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+
+        then each GZ file would contain 2000 rows of data 
 
 
-    a way to do it would be to break it up, with ALA you can request parts of the download. so you could request say 2000 rows at a time
+        WARNING:: I have tested 100000 rows and it downloads badly, 
 
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+        I have tested 50,000 rows and it downloads happily, so the lines below would download the first 150000 rows of  ANIMALIA
 
-    then each GZ file would contain 2000 rows of data 
-
-
-    WARNING:: I have tested 100000 rows and it downloads badly, 
-
-    I have tested 50,000 rows and it downloads happily, so the lines below would download the first 150000 rows of  ANIMALIA
-
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
-        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+            http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
 
 
-    So the next step would be to automate this so it downloads the whole lot. 
+        So the next step would be to automate this so it downloads the whole lot. 
 
 
 
-AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
+
 =======================================================================
-    using WGET is a much safer and useful way to download webpages and other files from the net/
+=======            SECTION 3 - BULK DATA ACCESS                 ======= 
+=======================================================================
 
 
-        eg.  wget -O example.html http://www.electrictoolbox.com/wget-save-different-filename/
+3.1) AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
+=======================================================================
 
-            this line will save the page page / file at "http://www.electrictoolbox.com/wget-save-different-filename/" 
-            to a local file named "example.html"
+    wget
+    ----
+
+        using WGET is a much safer and useful way to download webpages and other files from the net/
+
+            eg.  wget -O example.html http://www.electrictoolbox.com/wget-save-different-filename/
+
+                this line will save the page page / file at "http://www.electrictoolbox.com/wget-save-different-filename/" 
+                to a local file named "example.html"
 
 
-    So if we want to download the location data for Animals (ANIMALIA)
+        So if we want to download the location data for Animals (ANIMALIA)
 
-        wget -O occurence_ANIMALIA_00000000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
-        wget -O occurence_ANIMALIA_00100000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
-        wget -O occurence_ANIMALIA_00150000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
-
-
+            wget -O occurence_ANIMALIA_00000000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+            wget -O occurence_ANIMALIA_00100000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+            wget -O occurence_ANIMALIA_00150000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
 
     
+3.2 PHP SCRIPTS 
+=======================================================================
+    I have written these php scripts to work under a Linux environment and expect 
+    standard Linux commands to be available.  (refer above to for information installing Linux)
 
 
-    PHP SCRIPT: occurences.php
-    --------------------------
+
+3.2.1) occurences.php
+=======================================================================
     This script will handle downloading the data in "pages",  you can tell it how big you want each page / GZ file to be
     and then you can tell how many pages you want, 
 
-    
 
-    Run the script with no parameters to get the simple  help page
-    
-
-    $ php occurences.php 
-
-        php occurences.php --name=SpeciesName      --output_folder=foldername     .... occurence points for this name and place gz files in this folder
-        php occurences.php --name=lsid:(ALA LSID)  --output_folder=foldername     .... occurence points for this LSID and place gz files in this folder
-
-        --page_count=-1          .... stop after this number of pages (useful for testing)
-        --page_size=50000        .... each page of data is this many rows (tested to work up to 50000 rows - becomes less responsive over this)
-
-        --info_only=true         .... display information about the results but NOT the results
-        --count_only=true        .... display record count only - no data
-
-        --connection_sleep=10    .... Number of seconds to wait before requesting next page of data
+    usage
+    --------------------------
+        Run the script with no parameters to get the simple  help page
 
 
+        $ php occurences.php 
 
-    example: Download all the location data available for 'Rattus' (Genus Rattus - rats, and some other rodents )
-             and save it in the 'data' folder. using default page size (50,000 rows) and page count (default page count is ALL use -1)
-    --------------------------------------------------------------------------------------------------------------------------------------
+            php occurences.php --name=SpeciesName      --output_folder=foldername     .... occurence points for this name and place gz files in this folder
+            php occurences.php --name=lsid:(ALA LSID)  --output_folder=foldername     .... occurence points for this LSID and place gz files in this folder
 
-    command lines you can use to do the same thing
+            --page_count=-1          .... stop after this number of pages (useful for testing)
+            --page_size=50000        .... each page of data is this many rows (tested to work up to 50000 rows - becomes less responsive over this)
 
-        php occurences.php  --name=Rattus  --output_folder=data  
+            --info_only=true         .... display information about the results but NOT the results
+            --count_only=true        .... display record count only - no data
 
-        php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 
+            --connection_sleep=10    .... Number of seconds to wait before requesting next page of data
 
-        php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 --page_count=-1
 
+
+
+    example 
+    --------------------------------
+
+    Download all the location data available for 'Rattus' (Genus Rattus - rats, and some other rodents )
+    and save it in the 'data' folder. using default page size (50,000 rows) and page count (default page count is ALL use -1)
+
+        command lines you can use to do the same thing
+
+            php occurences.php  --name=Rattus  --output_folder=data  
+
+            php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 
+
+            php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 --page_count=-1
+
+
+
+    output from occurences.php 
+    --------------------------
+    The GZ files are kept after download, the last part of the script to to gUnzip each file and concatenate
+    it to a larger single CSV file.
+
+
+    gz files 
+    --------
 
         $ ls -1 data/Rattus*
 
         data/Rattus_00000000.gz     - gZipped file downloaded   rows 0 --page_size  
         data/Rattus_00050000.gz
         data/Rattus.csv             - ungzipped and combined complete CSV file.
-                                      this name is created from the 'output_folder' and the 'name'
+                                      note: this name is created from the 'output_folder' and the 'name'
 
 
-        $ cat data/Rattus.csv
+    csv files 
+    ---------
+
+        $ head -n10 data/Rattus.csv
 
         - first 10 rows,shows header and column values.
 
@@ -484,9 +601,6 @@ AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
             "138.68731","-34.97152","1986","11","Rattus sp.","||||"
             "138.68731","-34.97152","1986","11","Rattus sp.","||||"
             "139.31395","-35.14854","2004","08","Rattus sp.","||||"
-
-
-
 
 
 
