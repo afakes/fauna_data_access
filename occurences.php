@@ -176,8 +176,8 @@ function usage($argv)
     if ( !(!isset($argv[1]) ||  $argv[1] == "--help" || $argv[1] == "-h")) return;    
     
     echo " \n";
-    echo " {$argv[0]} --name=SpeciesName      --output_folder=foldername     .... occurence points for this name and place gz files in this folder\n";
-    echo " {$argv[0]} --name=lsid:(ALA LSID)  --output_folder=foldername     .... occurence points for this LSID and place gz files in this folder\n";
+    echo " php {$argv[0]} --name=SpeciesName      --output_folder=foldername     .... occurence points for this name and place gz files in this folder\n";
+    echo " php {$argv[0]} --name=lsid:(ALA LSID)  --output_folder=foldername     .... occurence points for this LSID and place gz files in this folder\n";
 
     echo " \n";
     echo " --page_count=-1          .... stop after this number of pages (useful for testing)\n";

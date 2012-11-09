@@ -45,211 +45,445 @@ Linux variant  .... This project was built with Debian,
                             
     
 if you like Windows and want to keep it, I would suggest you setup Virtualbox 
-(an open source virtual machine environment) and run Debian insdie it.
+(an open source virtual machine environment) and run Debian inside it.
 
 https://www.virtualbox.org/
 https://www.virtualbox.org/wiki/Downloads
 
 
+If you want to find a prebuilt Debian mage have a look here -  
+site:: http://virtualboxes.org/images/debian/
+
+
+            Debian GNU/Linux 6.0.6 alias squeeze
+            Size (compressed/uncompressed): 1.8 GBytes / 5.16 GBytes
+
+            Link: http://downloads.sourceforge.net/virtualboximage/debian_6.0.6.vdi.7z
+
+            Active user account(s)      username  password
+                                        -------------------------
+                                        root      toor
+                                        debian    reverse
+
+            Notes: GNOME desktop environment, Guest Additions installed
+
+
+
+
 
 Command line programs 
 =======================================================================
-I have written this php scripts to work under a Linux environment and expect 
-standard Linux commands to be available.
+    I have written this php scripts to work under a Linux environment and expect 
+    standard Linux commands to be available. to setup PHP to run in Linux is quote simple
+    once you are at the Linux prompt
+    
+
+        jc166922@afakes:~$
+
+        command:  'su'
+
+        jc166922@afakes:~$ su <enter>
+        Password:  <enter the password for root>
 
 
-Web pages 
+        root@afakes:/home/jc166922#    <---  this is the root prompt   (usually with the # at the end)
+
+        command:  'apt-get update'
+
+        root@afakes:/home/jc166922#  apt-get update <enter>
+
+        command:  'apt-get install php5 php5-cli php5-cgi php5-curl php5-gd php5-mysql'
+
+        root@afakes:/home/jc166922#  apt-get install php5 php5-cli php5-cgi php5-curl php5-gd php5-mysql <enter>
+
+
+        if you see something like
+
+                he following package was automatically installed and is no longer required:
+                libgdal1-1.6.0-grass
+                Use 'apt-get autoremove' to remove them.
+                Suggested packages:
+                php-pear
+                The following NEW packages will be installed:
+                php5-cgi
+                0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+                Need to get 5,889 kB of archives.
+                After this operation, 15.6 MB of additional disk space will be used.
+                Do you want to continue [Y/n]? 
+
+
+        And you are usually ask 'Do you want to continue [Y/n]? '
+
+        hit >enter> and that will select Yes, PHP will install 
+
+        --- PHP will then  be downloaded and installed
+
+                Get:1 http://mirror.aarnet.edu.au/debian/ squeeze/main php5-cgi amd64 5.3.3-7+squeeze14 [5,889 kB]
+                Fetched 5,889 kB in 6s (908 kB/s)   
+
+        -- to test   'php -v'
+
+                PHP 5.3.3-7+squeeze14 with Suhosin-Patch (cli) (built: Aug  6 2012 14:18:06) 
+                Copyright (c) 1997-2009 The PHP Group
+                Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies
+                    with Suhosin v0.9.32.1, Copyright (c) 2007-2010, by SektionEins GmbH
+
+
+
+
+    Now you know how to install with 'apt-get' other items you may want to install:
+    -------------------------------------------------------------------------------
+    apache Web server::                apt-get install apache
+
+    terminal quick text editor::       apt-get install nano     
+
+    simple graphic text editor::       apt-get install gedit
+
+    terminal directory tree::          apt-get install tree 
+
+    GIT-HUB code access::              apt-get install git
+
+    downdload urls to files::          apt-get install wget
+
+
+
+Other software 
 =======================================================================
-the web pages just access the 'Command line programs' and then display the output on a web page
+
+Netbeans::  This must be one of the best development environments  http://netbeans.org/
+            When you download, either the PHP only or the full version.
 
 
 
 
 Direct ALA URL's
 =======================================================================
-If you want to get the data yourself direct of ALA, below are some URLs 
-and what they can get you. Some URls' and their example data output.
+    If you want to get the data yourself direct of ALA, below are some URLs 
+    and what they can get you. Some URls' and their example data output.
 
 
-Field Names   
------------------------------------------------------------------------
-used in  URL as  '&fl=field,field,field',, 
-useful fields have been  marked with '-->'
+    Web Services:
+            http://www.ala.org.au/about-the-atlas/downloadable-tools/web-services/
 
-        assertions
-    --> basis_of_record
-        biogeographic_region
-        catalogue_number
-        collection_code
-        collector
-        collector_text
-        collectors
-        common_name_and_lsid
-        coordinate_uncertainty
-        country
-        data_provider
-        data_provider_uid
-        data_resource
-        data_resource_uid
-    --> geospatial_kosher
-        ibra
-        id
-    --> lat_long
-    --> latitude
-    --> longitude
-    --> month
-        multimedia
-    --> names_and_lsid
-    --> occurrence_date
-    --> occurrence_year
-        outlier_layer_count
-        places
-        point-0.0001
-        point-0.001
-        point-0.01
-        point-0.1
-        point-1
-        provenance
-        raw_basis_of_record
-    --> raw_taxon_name
-        record_type
-        row_key
-        state
-        system_assertions
-        taxonomic_kosher
-        user_assertions
-        user_id
-    --> year
-
-
-NOTE: this field name list is not complete but only the useful/obvious are listed
-
-
-
-example:: get the  latitude & longitude  for all species  grouped in the "Macropus" 
-------------------------------------------------------------------------------------------------------------------
-
-This quickest way to download the whole lot is to request it as a gZipped (GZ) file and then undo that file later.
-- I have tested a few ways to do this via JSOn data blocks and others and the GZ file is by far the fastest
-
-the URL
--------
-http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=macropus&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
-
-
-the description
----------------
-
-So if we break this up you  will find these parts
-
-DOMAIN ......... http://biocache.ala.org.au/
-folder ......... ws/webportal/
-CGI script ..... occurrences.gz
-query string ... ?q=macropus&fl=raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
-
-                 ***
-                 *** if we break up the query string we see these parts   q,fl,pageSize
-                 *** 
-                        q=macropus   
-                                   ...... send 'macropus' as the value if 'q' is this is what we want to query
-
-                       fl=raw_taxon_name,basis_of_record,longitude,latitude,names_and_lsid
-
-                                   ...... set the list of fields we want returned 
-                                          --> raw_taxon_name
-                                          --> basis_of_record 
-                                          --> longitude,
-                                          --> latitude
-                                          --> names_and_lsid
-
-                       pageSize=999999999
-                                   ...... set the size of each 'page' of data,  
-                                          if you set this to a very large value then you will get all the 'pages' / rows of data
-                                          if you leave it out then you will onlt get the first 10  or some default number of rows
-
-
-                       
-
-
-the result  (file)
-------------------
-a GZipped  file called  'occurrences.gz'
-
-
-the result (unGZipped)
-----------------------
-a CSV structured file , one header line and multiple data lines separated by COMMA ',', and text enclosed in QUOTES '"'
-
-    raw_taxon_name,basis_of_record,longitude,latitude
-    "Macropus sp.","PreservedSpecimen","140.87637","-33.94085"
-    "Macropus sp.","HumanObservation","140.87637","-33.94085"
-    "Macropus sp.","HumanObservation","140.9798","-33.95471"
-    "Macropus sp.","HumanObservation","140.96858","-33.93926"
-    "Macropus sp.","HumanObservation","138.07677","-34.13145"
-    "Macropus sp.","HumanObservation","138.10839","-34.12406"
-    "Macropus sp.","HumanObservation","137.44256","-34.93364"
-    "Macropus sp.","HumanObservation","137.44256","-34.93364"
-    "Macropus sp.","HumanObservation","137.43554","-35.04074"
-    "Macropus sp.","HumanObservation","137.43554","-35.04074"
-    "Macropus sp.","HumanObservation","137.43554","-35.04074"
+    Spatial Web Services:
+            http://spatial.ala.org.au/ws/
 
 
 
 
-If you want to download the entire locations database for Animals (ANIMALIA)
---------------------------------------------------------------------------------
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
+    example:: get the  latitude & longitude  for all species  grouped in the "Macropus" 
+    ------------------------------------------------------------------------------------------------------------------
+
+        This quickest way to download the whole lot is to request it as a gZipped (GZ) file and then undo that file later.
+
+        NOTE: I have tested a few ways to do this via JSON data blocks and others and the 
+            GZ file is by far the fastest
 
 
-WARNING:: This would WILL take too long and would probably fail. If you are running it from a web page 
-          and waiting for apache to return it WILL die. so DON'T do it.
+    the URL
+    -------
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=macropus&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+
+        This URL would return you a GZipped file conatining all known locations (that ALA knows about) 
+        with the columns "names_and_lsid, raw_taxon_name, basis_of_record, longitude, latitude"
+
+        unGZipping this file and then opening the CSV you find a set of rows, though not all rows seem 
+        to have Lat and Long so you will have to clean out any rows that do not contain this useful data,
 
 
-but a way to do it would be to break it up, with ALA you can request parts of the download. so you could request say 2000 rows at a time
+        description of the URL
+        ----------------------
 
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
-
-then each GZ file would contain 2000 rows of data 
-
-- I have tested 100000 rows and it downloads badly, 
+            So if we break this up you  will find these parts
 
 
-I have tested 50,000 rows and it downloads happily, so the lines below would download the first 150000 rows of  ANIMALIA
+            DOMAIN ......... http://biocache.ala.org.au/
+            folder ......... ws/webportal/
+            CGI script ..... occurrences.gz
+            query string ... ?q=macropus&fl=raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+
+                            ***
+                            *** if we break up the query string we see these parts   q,fl,pageSize
+                            *** 
+
+                                q=macropus   
+                                            ...... send 'macropus' as the value if 'q'  (this is what we want to query)
+
+                                fl=raw_taxon_name,basis_of_record,longitude,latitude,names_and_lsid
+
+                                            ...... set the list of fields we want returned 
+                                                    --> raw_taxon_name
+                                                    --> basis_of_record 
+                                                    --> longitude,
+                                                    --> latitude
+                                                    --> names_and_lsid
+
+                                pageSize=999999999
+                                            ...... set the size of each 'page' of data,  
+                                                    if you set this to a very large value then you will get all the 'pages' / rows of data
+                                                    if you leave it out then you will only get the first 10  or some default number of rows
+                                                    NOTE: if you ask for a q= that would cause a lot of rows to be returned then the query / web page call will fail)
 
 
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
-     http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+        example URLs
+        ------------------------------------
+
+        example:: Get all location points for 'macropus'
+
+                http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=macropus&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
 
 
-So the next step would be to automate this so it downloads the whole lot. 
+        example::Get all location points for 'Red Kangaroo'
 
+                http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=red%20kangaroo&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+
+                http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=red+kangaroo&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+
+                NOTE (1):: when creating a URL  you must replace 'space' with either '+'  or  '%20'  - the hex value for decimal 32 (because it's ASCII character code 32)
+
+                NOTE (2):: After running this query I noticed that this returns not just 'Red Kangaroo',
+                           but most things with 'Red' in the name
+
+                If you only want 'Red Kangaroo'  aka  'Macropus rufus'
+                it's better to use the LSID 
+
+                
+
+
+        example::  Get all location points for 'Macropus rufus'  using it's Life Science Identifier  (LSID)
+
+                Macropus rufus  ..... urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae       
+
+
+                http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=lsid:urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae&fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude&pageSize=999999999
+
+
+                note:: we see that if we use   'q=lsid:<Life Science ID>
+                                                q=lsid:urn:lsid:biodiversity.org.au:afd.taxon:31a9b8b8-4e8f-4343-a15f-2ed24e0bf1ae
+
+                       we get back the correct file set.
+
+
+
+        Field Names   
+        -----------------------------------------------------------------------
+        used in  URL as  '&fl=field,field,field',, 
+        useful fields have been  marked with '-->'
+
+                assertions
+            --> basis_of_record
+                biogeographic_region
+                catalogue_number
+                collection_code
+                collector
+                collector_text
+                collectors
+                common_name_and_lsid
+                coordinate_uncertainty
+                country
+                data_provider
+                data_provider_uid
+                data_resource
+                data_resource_uid
+            --> geospatial_kosher
+                ibra
+                id
+            --> lat_long
+            --> latitude
+            --> longitude
+            --> month
+                multimedia
+            --> names_and_lsid
+            --> occurrence_date
+            --> occurrence_year
+                outlier_layer_count
+                places
+                point-0.0001
+                point-0.001
+                point-0.01
+                point-0.1
+                point-1
+                provenance
+                raw_basis_of_record
+            --> raw_taxon_name
+                record_type
+                row_key
+                state
+                system_assertions
+                taxonomic_kosher
+                user_assertions
+                user_id
+            --> year
+
+
+        NOTE: this field name list is not complete but only the useful/obvious are listed
+
+
+
+
+        the result (unGZipped)
+        ----------------------
+            a CSV structured file , one header line and multiple data lines separated by COMMA ',', and text enclosed in QUOTES '"'
+            (if you are using a web browser to download the file, the default filename is 'occurences.gz'
+
+            the best command to GUnzip this file is 
+
+
+                example::    gunzip -c occurences.gz >   Macropus.csv
+
+                            this is extract the text from the archive and save it out to 'Macropus.csv'
+
+                            note: if you don't use '-c' option then the 'occurences.gz' will be decompressed 
+                                in place and you will get a file called  'occurences' (with no extension)
+                                and you will lose the GZ file.
+        
+
+        the CSV file structure.
+        ---------------------------------
+
+                    raw_taxon_name,basis_of_record,longitude,latitude
+                    "Macropus sp.","PreservedSpecimen","140.87637","-33.94085"
+                    "Macropus sp.","HumanObservation","140.87637","-33.94085"
+                    "Macropus sp.","HumanObservation","140.9798","-33.95471"
+                    "Macropus sp.","HumanObservation","140.96858","-33.93926"
+                    "Macropus sp.","HumanObservation","138.07677","-34.13145"
+                    "Macropus sp.","HumanObservation","138.10839","-34.12406"
+                    "Macropus sp.","HumanObservation","137.44256","-34.93364"
+                    "Macropus sp.","HumanObservation","137.44256","-34.93364"
+                    "Macropus sp.","HumanObservation","137.43554","-35.04074"
+                    "Macropus sp.","HumanObservation","137.43554","-35.04074"
+                    "Macropus sp.","HumanObservation","137.43554","-35.04074"
+
+
+            NOTE:  when you make the request URL, the order in which you list the 
+                field names is the order of the outputted columns
+
+
+                so the above file is from the field list  'fl=names_and_lsid,raw_taxon_name,basis_of_record,longitude,latitude'
+
+
+
+
+DOWNLOAD OF DATA FROM Atlas of Living Australia
+=======================================================================
+    If you want to download the entire locations database for Animals (ANIMALIA)
+
+
+    http://biocache.ala.org.au/ws/webportal/occurrences.gz?q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=99999999
+
+    ########  DON'T DO THIS  ########  
+
+    WARNING:: This WILL take too long and will probably fail. If you are running it from a web page 
+              and waiting for apache to return it WILL die.   
+
+
+
+
+    a way to do it would be to break it up, with ALA you can request parts of the download. so you could request say 2000 rows at a time
+
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=0&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=2000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=4000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?start=6000&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=2000
+
+    then each GZ file would contain 2000 rows of data 
+
+
+    WARNING:: I have tested 100000 rows and it downloads badly, 
+
+    I have tested 50,000 rows and it downloads happily, so the lines below would download the first 150000 rows of  ANIMALIA
+
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+        http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+
+
+    So the next step would be to automate this so it downloads the whole lot. 
 
 
 
 AUTOMATED DOWNLOAD OF DATA FROM Atlas of Living Australia
 =======================================================================
-using WGET is a much safer and useful way to download webpages and other files from the net/
+    using WGET is a much safer and useful way to download webpages and other files from the net/
+
+
+        eg.  wget -O example.html http://www.electrictoolbox.com/wget-save-different-filename/
+
+            this line will save the page page / file at "http://www.electrictoolbox.com/wget-save-different-filename/" 
+            to a local file named "example.html"
+
+
+    So if we want to download the location data for Animals (ANIMALIA)
+
+        wget -O occurence_ANIMALIA_00000000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
+        wget -O occurence_ANIMALIA_00100000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
+        wget -O occurence_ANIMALIA_00150000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+
 
 
     
+
+
+    PHP SCRIPT: occurences.php
+    --------------------------
+    This script will handle downloading the data in "pages",  you can tell it how big you want each page / GZ file to be
+    and then you can tell how many pages you want, 
+
     
-    eg.  wget -O example.html http://www.electrictoolbox.com/wget-save-different-filename/
 
-         this line will save the page page / file at "http://www.electrictoolbox.com/wget-save-different-filename/" 
-         to a local file named "example.html"
+    Run the script with no parameters to get the simple  help page
+    
+
+    $ php occurences.php 
+
+        php occurences.php --name=SpeciesName      --output_folder=foldername     .... occurence points for this name and place gz files in this folder
+        php occurences.php --name=lsid:(ALA LSID)  --output_folder=foldername     .... occurence points for this LSID and place gz files in this folder
+
+        --page_count=-1          .... stop after this number of pages (useful for testing)
+        --page_size=50000        .... each page of data is this many rows (tested to work up to 50000 rows - becomes less responsive over this)
+
+        --info_only=true         .... display information about the results but NOT the results
+        --count_only=true        .... display record count only - no data
+
+        --connection_sleep=10    .... Number of seconds to wait before requesting next page of data
 
 
 
-So if we want to download the location data for Animals (ANIMALIA)
+    example: Download all the location data available for 'Rattus' (Genus Rattus - rats, and some other rodents )
+             and save it in the 'data' folder. using default page size (50,000 rows) and page count (default page count is ALL use -1)
+    --------------------------------------------------------------------------------------------------------------------------------------
 
-     wget -O occurence_ANIMALIA_00000000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=0
-     wget -O occurence_ANIMALIA_00100000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=100000
-     wget -O occurence_ANIMALIA_00150000.gz http://biocache.ala.org.au/ws/webportal/occurrences.gz?&q=ANIMALIA&fl=longitude,latitude,year,month,raw_taxon_name,names_and_lsid&pageSize=50000&start=150000
+    command lines you can use to do the same thing
 
+        php occurences.php  --name=Rattus  --output_folder=data  
+
+        php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 
+
+        php occurences.php  --name=Rattus  --output_folder=data  --page_size=50000 --page_count=-1
+
+
+        $ ls -1 data/Rattus*
+
+        data/Rattus_00000000.gz     - gZipped file downloaded   rows 0 --page_size  
+        data/Rattus_00050000.gz
+        data/Rattus.csv             - ungzipped and combined complete CSV file.
+                                      this name is created from the 'output_folder' and the 'name'
+
+
+        $ cat data/Rattus.csv
+
+        - first 10 rows,shows header and column values.
+
+            longitude,latitude,year,month,raw_taxon_name,names_and_lsid
+            "140.45986","-37.915","1997","03","Rattus sp.","||||"
+            "140.85154","-37.96805","1997","03","Rattus sp.","||||"
+            "140.58831","-37.71235","1997","04","Rattus sp.","||||"
+            "140.53233","-37.62219","1997","04","Rattus sp.","||||"
+            "140.7026","-37.69748","1997","03","Rattus sp.","||||"
+            "140.33733","-37.17628","1997","04","Rattus sp.","||||"
+            "138.68731","-34.97152","1986","11","Rattus sp.","||||"
+            "138.68731","-34.97152","1986","11","Rattus sp.","||||"
+            "139.31395","-35.14854","2004","08","Rattus sp.","||||"
 
 
 
